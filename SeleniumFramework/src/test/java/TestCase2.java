@@ -36,7 +36,7 @@ public class TestCase2 extends Page1 {
         String facilityText=facility.getText();
         Assert.assertEquals(facilityText,"Seoul CURA Healthcare Center");
         String VisitDate=visit_date.getText();
-        Assert.assertEquals(VisitDate,"30/07/2018");
+        Assert.assertEquals(VisitDate,"31/07/2018");
         HomePageButton.click();
     }
 }
