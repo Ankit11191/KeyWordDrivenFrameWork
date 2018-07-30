@@ -23,7 +23,7 @@ public class TestCase2 extends Page1 {
         actionClass.selectCheckBox(Medicaid);
         actionClass.selectRadioButton("",Medicaid);
         calendar.click();
-        date.sendKeys("30/07/2018");
+        date.sendKeys("31/07/2018");
         bookAppointment.click();
     }
 
