@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 public class Page1 extends BrowserHandle {
-    WebDriver driver;
+
     @FindBy(id="btn-make-appointment") WebElement makeAppointmant;
     @FindBy(id="txt-username") WebElement username;
     @FindBy(name="password") WebElement password;
@@ -18,10 +18,9 @@ public class Page1 extends BrowserHandle {
     @Test(priority = 1)
     public void CreateAccount ()
     {
-        BrowserConfigration browserConfigration=new BrowserConfigration();
-        this.driver=browserConfigration.getDriver();
-        PageFactory.initElements(driver, this);
-        driver.get("http://demoaut.katalon.com/");
+        WebDriver driver1=BrowserConfigration.getInstance().getDriver();
+        PageFactory.initElements(driver1, this);
+        driver1.get("http://demoaut.katalon.com/");
         makeAppointmant.click();
         username.sendKeys("John Doe");
         password.sendKeys("ThisIsNotAPassword");
