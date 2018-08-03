@@ -1,15 +1,13 @@
 package BaseClasses;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
 public class ReadFromPropertiesFile {
-    Properties  properties=new Properties();
     public String readProperties(String propName)
     {
+        Properties  properties=new Properties();
         FileInputStream file=null;
         try {
             file = new FileInputStream(getClass().getClassLoader().getResource("configFile/config.properties").getPath());
